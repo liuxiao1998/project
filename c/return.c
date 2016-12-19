@@ -4,11 +4,11 @@
 int num;
 	int aa()
 	{
-    char a;
-	scanf("%c",&a);
-	if(strcmp(&a,"y")==0)
+    char b;
+	scanf("%c",&b);
+	if(strcmp(&b,"y")==0)
 	  return 1;
-	else if(strcmp(&a,"n")==0)
+	else if(strcmp(&b,"n")==0)
 	  return 0;
 	else 
 	  return -1;
