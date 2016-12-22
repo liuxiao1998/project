@@ -5,13 +5,8 @@
 void popenc(char *cm)
 {
 	using namespace std;
-	
-
-	
     FILE* logw;
-
 	logw=popen(cm,"w");
-    
 	pclose(logw);
 	logw=NULL;
 }

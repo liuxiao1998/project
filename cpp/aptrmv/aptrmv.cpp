@@ -3,6 +3,7 @@
 #include<string.h>
 int main(int argc,char *argv[])
 {
+	int i=1;
 	extern void popenc(char*cm);
 	if(argv[1]==NULL)
 	{
@@ -10,10 +11,17 @@ int main(int argc,char *argv[])
 		exit(1);
 	 
 	}
-	char cmd[100]="sudo apt-get purge ";
+	char cmd[]="sudo apt-get purge";
+	char sp[]=" ";
 	char *check;
     check=(char *)malloc(100);
-	strcat(cmd,argv[1]);
+	
+	while(i<=argc-1)
+	{
+		strcat(cmd,sp);
+		strcat(cmd,argv[i]);
+		i++;
+	}
 	printf("即将执行命令:%s\n",cmd);
 recheck:printf("要继续吗？（y or n）\n");
 	scanf("%s",check);
