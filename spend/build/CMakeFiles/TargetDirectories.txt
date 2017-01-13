@@ -1,0 +1,7 @@
+/home/eric/projects/spend/build/CMakeFiles/install.dir
+/home/eric/projects/spend/build/CMakeFiles/list_install_components.dir
+/home/eric/projects/spend/build/CMakeFiles/rebuild_cache.dir
+/home/eric/projects/spend/build/CMakeFiles/spend.dir
+/home/eric/projects/spend/build/CMakeFiles/install/local.dir
+/home/eric/projects/spend/build/CMakeFiles/edit_cache.dir
+/home/eric/projects/spend/build/CMakeFiles/install/strip.dir
