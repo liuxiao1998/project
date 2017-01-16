@@ -39,3 +39,6 @@ Project Target=spend,spend
 Use External Terminal=true
 Working Directory=
 isExecutable=false
+
+[Project]
+VersionControlSupport=kdevgit
