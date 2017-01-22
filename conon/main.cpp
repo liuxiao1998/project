@@ -1,46 +1,53 @@
 #include <iostream>
-#include<time.h>
 #include<stdlib.h>
+#include<time.h>
 #include<stdio.h>
 #include<fstream>
 
 using namespace std;
-int main(int argc, char **argv) 
+int main(int argc, char **argv)
 {
-  string s,l;
   ofstream log;
   log.open("log");
-  char s1[2],l1[30];
-  int res,resb,i=0,j=0,tme;
-  time_t start,stop;
-  while(j<=49)
+  int res,resb,i,j=0,k;
+  int sum=0;
+  cout<<"输入循环次数（一定要大于一次）";
+  cin>>k;
+  ++k;
+  while(j<=(k-1))
   {
-  srand(time(0));
+    i=0;
+  srand(time(NULL));
   res=rand()%10;
   resb=res;
-  start=time(NULL);
   while(resb==res)
   {
+
     ++i;
     srand(time(NULL));
     res=rand()%10;
-    //cout<<res<<resb<<endl;
   }
-  stop=time(NULL);
-  tme=stop-start;
-  s="time: ";
-  sprintf(s1,"%d",tme);
-  s.append(s1);
-  l="s loop: ";
-  sprintf(l1,"%d",i);
-  l.append(l1);
-  s+=l;
+
   ++j;
-  cout<<j<<": "<<s<<endl;
-  
-  log<<j<<" "<<s.data()<<endl;
-  
+  if(j>1)
+  {
+  sum+=i;
+}
+
+if(j>1)
+  {
+if(j<=10)
+  {
+cout<<"0"<<j-1<<" "<<i<<endl;
   }
+else
+{
+
+  cout<<j-1<<" "<<" "<<i<<endl;
+}
+  }
+}
+  cout<<"cpu分数: "<<sum/(k-1)<<endl;
   log.close();
   return 0;
 }
