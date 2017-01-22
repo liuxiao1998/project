@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/eric/projects/conon/main.cpp
+iostream
+-
+time.h
+-
+stdlib.h
+-
+stdio.h
+-
+fstream
+-
+

@@ -38,4 +38,11 @@ External Terminal=gnome-terminal -e %exe
 Project Target=
 Use External Terminal=false
 Working Directory=
+<<<<<<< HEAD
 isExecutable=true
+=======
+isExecutable=false
+
+[Project]
+VersionControlSupport=kdevgit
+>>>>>>> 3c373064b911bb3c348391b4cb7edf10c653f0f6
