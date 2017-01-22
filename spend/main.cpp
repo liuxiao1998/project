@@ -11,42 +11,42 @@ class pa{
         string cmd;
         void show()
         {
-        cout<<"ç›®å‰æ€»æ¶ˆè´¹ï¼š"<<sum<<endl;
+        cout<<"Ä¿Ç°×ÜÏû·Ñ£º"<<sum<<endl;
         }
         void add()
         {
-        cout<<"æœ¬æ¬¡æ¶ˆè´¹é‡‘é¢:";
+        cout<<"±¾´ÎÏû·Ñ½ğ¶î:";
         cin>>spend;
         sum=sum+(int)spend;
-        cout<<"æ›´æ–°è®°å½•æˆåŠŸ,ç›®å‰æ€»æ¶ˆè´¹ï¼š"<<sum<<endl;
+        cout<<"¸üĞÂ¼ÇÂ¼³É¹¦,Ä¿Ç°×ÜÏû·Ñ£º"<<sum<<endl;
 
         }
         void rm()
         {
-        cout<<"è¾“å…¥è¯¯æ“ä½œé‡‘é¢ï¼š";
+        cout<<"ÊäÈëÎó²Ù×÷½ğ¶î£º";
         cin>>del;
         sum=sum-(int)del;
-        cout<<"æ›´æ–°è®°å½•æˆåŠŸ,ç›®å‰æ€»æ¶ˆè´¹ï¼š"<<sum<<endl;
+        cout<<"¸üĞÂ¼ÇÂ¼³É¹¦,Ä¿Ç°×ÜÏû·Ñ£º"<<sum<<endl;
         }
         void error()
         {
-        cout<<"æ²¡æœ‰è¿™æ¡å‘½ä»¤ï¼Œè¾“å…¥helpå–å¾—å¸®åŠ©"<<endl;
+        cout<<"Ã»ÓĞÕâÌõÃüÁî£¬ÊäÈëhelpÈ¡µÃ°ïÖú"<<endl;
         }
         void help()
         {
-        cout<<"add  :æ·»åŠ æ¶ˆè´¹é‡‘é¢è®°å½•"<<endl;
-        cout<<"rm   :å»é™¤æ¶ˆè´¹é‡‘é¢è®°å½•"<<endl;
-        cout<<"ls   :æ˜¾ç¤ºæ¶ˆè´¹æ€»é‡‘é¢"<<endl;
-        cout<<"save :ä¿å­˜æ•°æ®åˆ°ç¡¬ç›˜"<<endl;
-        cout<<"exit :é€€å‡º"<<endl;
-        cout<<"rmall:æ¸…ç©ºå…¨éƒ¨æ•°æ®"<<endl;
+        cout<<"add  :Ìí¼ÓÏû·Ñ½ğ¶î¼ÇÂ¼"<<endl;
+        cout<<"rm   :È¥³ıÏû·Ñ½ğ¶î¼ÇÂ¼"<<endl;
+        cout<<"ls   :ÏÔÊ¾Ïû·Ñ×Ü½ğ¶î"<<endl;
+        cout<<"save :±£´æÊı¾İµ½Ó²ÅÌ"<<endl;
+        cout<<"exit :ÍË³ö"<<endl;
+        cout<<"rmall:Çå¿ÕÈ«²¿Êı¾İ"<<endl;
         }
         void save(int a)
         {
            ofstream fp("log.txt");
            fp<<a;
            fp.close();
-           cout<<"ä¿å­˜æˆåŠŸ!"<<endl;
+           cout<<"±£´æ³É¹¦!"<<endl;
         }
         void getsave()
         {
