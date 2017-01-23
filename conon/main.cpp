@@ -5,6 +5,7 @@
 #include<fstream>
 
 using namespace std;
+time_t *now;
 int main(int argc, char **argv)
 {
   ofstream log;
@@ -47,7 +48,8 @@ else
 }
   }
 }
-  cout<<"cpu分数: "<<sum/(k-1)/10000<<endl;
+
+  cout<<" cpu分数: "<<sum/(k-1)/10000<<endl;
   log.close();
   return 0;
 }
