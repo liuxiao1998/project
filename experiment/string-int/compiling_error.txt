@@ -1,0 +1,23 @@
+C:\projects\experiment\string-int\main.cpp: In function 'int main()':
+C:\projects\experiment\string-int\main.cpp:10:4: error: no match for 'operator=' (operand types are 'tm' and 'time_t {aka long int}')
+   s=time(0);
+    ^
+In file included from C:\projects\experiment\string-int\main.cpp:4:0:
+c:\mingw\include\time.h:172:8: note: candidate: tm& tm::operator=(const tm&)
+ struct tm
+        ^
+c:\mingw\include\time.h:172:8: note:   no known conversion for argument 1 from 'time_t {aka long int}' to 'const tm&'
+C:\projects\experiment\string-int\main.cpp:12:4: error: no match for 'operator=' (operand types are 'tm' and 'time_t {aka long int}')
+   v=time(0);
+    ^
+In file included from C:\projects\experiment\string-int\main.cpp:4:0:
+c:\mingw\include\time.h:172:8: note: candidate: tm& tm::operator=(const tm&)
+ struct tm
+        ^
+c:\mingw\include\time.h:172:8: note:   no known conversion for argument 1 from 'time_t {aka long int}' to 'const tm&'
+C:\projects\experiment\string-int\main.cpp:13:17: error: cannot convert 'tm' to 'time_t {aka long int}' for argument '1' to 'double difftime(time_t, time_t)'
+   a=difftime(v,s);
+                 ^
+C:\projects\experiment\string-int\main.cpp:14:22: error: cannot convert 'tm' to 'tm*' for argument '1' to 'time_t mktime(tm*)'
+   cout<<" "<<mktime(s)<<" "<<a<<endl;
+                      ^

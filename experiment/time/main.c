@@ -6,7 +6,7 @@ int main(int argc,char **argv)
 {
   double d=0.1;
   double start,end;
-  while (d>=0.1) {
+  while (1) {
   start=clock();
   getchar();
   end=clock();
