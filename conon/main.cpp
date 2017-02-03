@@ -2,12 +2,17 @@
 #include<stdlib.h>
 #include<time.h>
 #include<stdio.h>
+#include<string.h>
 #include<fstream>
 
 using namespace std;
 time_t *now;
 int main(int argc, char **argv)
 {
+  char ck[1];
+  cin>>ck;
+  while(strcmp("y",ck)==0)
+  {
   ofstream log;
   log.open("log");
   int res,resb,i,j=0,k;
@@ -51,5 +56,9 @@ else
 
   cout<<" cpu·ÖÊý: "<<sum/(k-1)/10000<<endl;
   log.close();
+  cin.clear();
+  cin.sync();
+  cin>>ck;
+  }
   return 0;
 }
