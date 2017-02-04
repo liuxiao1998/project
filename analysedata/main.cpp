@@ -11,7 +11,8 @@ This programme is designed for analysing data.
 #include<stdlib.h>
 using namespace std;
 string cmd;
-class tools{
+class tools
+{
 public:
   int i,j,k,sum,med;
   string filename,logname;
@@ -74,7 +75,7 @@ public:
         }
       }
     }
-    /* Correct the right order.  */
+    /* Sort the numlist and namelist.  */
     for(k=0;k<=j-2;++k)
     for(i=k+1;i<=j-1;++i)
     {
@@ -117,12 +118,13 @@ public:
   }
   void help()
   {
-    cout<<"Note: The programme can only support the following commands."<<endl;
+    cout<<"The programme can only support the following commands."<<endl;
     cout<<"analyse :classify and count"<<endl;
     cout<<"ls      :list results"<<endl;
     cout<<"save    :save results to local file"<<endl;
     cout<<"help    :get assistance"<<endl;
     cout<<"quit    :exit"<<endl;
+	cout<<"cls     :clear the screen"<<endl;
   }
   void checkcmd(string cmd)
   {
@@ -147,6 +149,10 @@ public:
     {
       ls();
     }
+	else if(strcmp(cmd.data(),"cls")==0)
+	{
+		system("cls");
+	}
     else if(strcmp(cmd.data(),"help")==0)
     {
       help();
