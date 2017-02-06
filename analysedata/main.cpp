@@ -1,6 +1,6 @@
 /*
 This programme is designed for analysing data.
-                   
+
 				   Author : liuxiao/Eric/1998
 */
 
@@ -8,35 +8,40 @@ This programme is designed for analysing data.
 #include<iostream>
 #include<fstream>
 #include<string.h>
+#include<stack>
 #include<stdlib.h>
+
+#define numlimit 100000
 using namespace std;
 string cmd;
+stack <int>numlist_r;
+stack <string>namelist_r;
 class tools
 {
 public:
-  int i,j,k,sum,med;
+  int i,j,k,med,sum,sum_norepeat;
   string filename,logname;
-  int numlist[10000];
-  string namelist[10000];
+
+  int numlist[numlimit];
+  string namelist[numlimit];
+
   string namelist_re;
   void savelog(ofstream &log)
   {
-    for(i=0;i<=j-1;++i)
+    for(i=0;i<=sum_norepeat-1;++i)
     {
-      if(strcmp(namelist[i].data()," ")!=0&&numlist[i]!=0&&strcmp(namelist[i].data(),"")!=0)
-      {
     log<<namelist[i]<<"   "<<numlist[i]<<endl;
-  }
 }
   }
   void clac()
   {
+
     cout<<"Type in the file's name."<<endl;
     cin>>filename;
     ifstream file(filename.data());
     if  (file.is_open())
     {
-      for(i=0;i<=10000;++i)
+      for(i=0;i<=numlimit;++i)
       {
         if(getline(file,namelist[i])==NULL)
         {
@@ -75,8 +80,14 @@ public:
         }
       }
     }
-    /* Sort the numlist and namelist.  */
+
+
+
+
+  /* Sort the numlist and namelist by bubble-sort.  */
+
     for(k=0;k<=j-2;++k)
+    {
     for(i=k+1;i<=j-1;++i)
     {
       if(numlist[k]<numlist[i])
@@ -88,9 +99,25 @@ public:
         numlist[i]=med;
         namelist[i]=namelist_re;
       }
-
     }
   }
+  for(i=j-1;i>=0;i--)
+  {
+    if(numlist[i]!=0&&strcmp(namelist[i].data()," ")!=0&&strcmp(namelist[i].data(),"")!=0)
+    {
+      namelist_r.push(namelist[i]);
+      numlist_r.push(numlist[i]);
+    }
+  }
+  sum_norepeat=namelist_r.size();
+  for(i=0;i<=sum_norepeat-1;++i)
+  {
+    namelist[i]=namelist_r.top();
+    namelist_r.pop();
+    numlist[i]=numlist_r.top();
+    numlist_r.pop();
+  }
+}
     else
     {
       cout<<"The file does not exist!"<<endl;
@@ -98,17 +125,15 @@ public:
     }
 
   }
-
   void ls()
   {
     sum=0;
-    for(i=0;i<=j-1;++i)
+    for(i=0;i<=sum_norepeat-1;++i)
     {
-      if(numlist[i]!=0&&strcmp(namelist[i].data()," ")!=0&&strcmp(namelist[i].data(),"")!=0)
-      {
+
         sum+=numlist[i];
       cout<<namelist[i]<<" "<<numlist[i]<<endl;
-}
+
     }
     cout<<"total :"<<sum<<endl;
   }
@@ -119,7 +144,7 @@ public:
   void help()
   {
     cout<<"The programme can only support the following commands."<<endl;
-    cout<<"analyse :classify and count"<<endl;
+    cout<<"ana :classify and count"<<endl;
     cout<<"ls      :list results"<<endl;
     cout<<"save    :save results to local file"<<endl;
     cout<<"help    :get assistance"<<endl;
@@ -129,7 +154,7 @@ public:
   void checkcmd(string cmd)
   {
     cin>>cmd;
-    if(strcmp("analyse",cmd.data())==0)
+    if(strcmp("ana",cmd.data())==0)
     {
       clac();
     }
@@ -166,6 +191,7 @@ public:
 int main()
 {
   cout<<"Welcome! I will help you analyse data."<<endl;
+
   while(1)
   {
     a.checkcmd(cmd);
