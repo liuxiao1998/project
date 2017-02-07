@@ -167,8 +167,16 @@ public:
       cout<<"Please type in the name of the log file."<<endl;
       cin>>logname;
       ofstream log(logname.data());
+if(log.is_open())
+{
       savelog(log);
       log.close();
+      cout<<"Log is saved."<<endl;
+}
+      else
+{cout<<"Fail to save log!\n Please run this software in administrator mode."<<endl;
+}
+
     }
     else if(strcmp(cmd.data(),"ls")==0)
     {
