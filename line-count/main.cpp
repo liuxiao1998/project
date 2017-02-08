@@ -45,8 +45,6 @@ void count(int *num,string *filename,int &sum)
     }
     num[i]=k;
     file.close();
-
-
 }
   else
   {
@@ -68,12 +66,8 @@ void ls(int &sum)
 int main()
 {
   getdirec(filename,sum);
-  cout<<sum;
   count(num,filename,sum);
   ls(sum);
   getchar();
   return 0;
-
-
-
 }
