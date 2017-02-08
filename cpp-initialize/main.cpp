@@ -10,6 +10,6 @@ int main()
   ofstream mm(ss.data());
 
   mm<<"#include<iostream>"<<endl<<"using namespace std;"<<endl<<"int main()"<<endl<<"{"<<endl<<endl<<"}";
-  mm<<endl<<"/*"<<endl<<"Ò»Ö±ÔÚÕÒÑ°×Å"<<endl<<"ÔÚºÎ´¦ÓĞÄãµÄÉíÓ°"<<endl<<"ÔÚÕâĞÇĞÇ¶¼ÏñÒªÂäÏÂÀ´µÄÒ¹Àï"<<endl<<"ÎÒÎŞ·¨ÔÙÆÛÆ­×Ô¼º"<<endl<<"one more time"<<endl<<"*/";
+  mm<<endl<<"/*"<<endl<<"ä¸€ç›´åœ¨æ‰¾å¯»ç€"<<endl<<"åœ¨ä½•å¤„æœ‰ä½ çš„èº«å½±"<<endl<<"åœ¨è¿™æ˜Ÿæ˜Ÿéƒ½åƒè¦è½ä¸‹æ¥çš„å¤œé‡Œ"<<endl<<"æˆ‘æ— æ³•å†æ¬ºéª—è‡ªå·±"<<endl<<"one more time"<<endl<<"*/";
   mm.close();
 }
