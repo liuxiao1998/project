@@ -17,7 +17,7 @@ int main(int argc, char **argv)
   log.open("log");
   int res,resb,i,j=0,k;
   int sum=0;
-  cout<<"输入循环次数（一定要大于一次，推荐10次）";
+  cout<<"type in loop times";
   cin>>k;
   ++k;
   while(j<=(k-1))
@@ -54,7 +54,7 @@ else
   }
 }
 
-  cout<<" cpu分数: "<<sum/(k-1)/10000<<endl;
+  cout<<" cpu鍒嗘暟: "<<sum/(k-1)/10000<<endl;
   log.close();
   cin.clear();
   cin.sync();

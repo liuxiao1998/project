@@ -1,5 +1,5 @@
-/**本程序是apt-get安装软件 专用卸载程序
-作者：刘啸**/
+/**鏈▼搴忔槸apt-get瀹夎杞欢 涓撶敤鍗歌浇绋嬪簭
+浣滆�咃細鍒樺暩**/
 
 #include<iostream>
 #include<stdio.h>
@@ -13,7 +13,7 @@ int main(int argc,char *argv[])
 	int i=1;
 	if(argv[1]==NULL)
 	{
-		printf("warning:缺少卸载软件名\n");
+		printf("warning:no arguments\n");
 		exit(1);
 
 	}
