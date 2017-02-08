@@ -39,7 +39,7 @@ void count(int *num,string *filename,int &sum)
   if(file.is_open())
   {
   k=0;
-    while(getline(file,linelist[k])!=NULL)
+    while(getline(file,linelist[k]))
     {
       ++k;
     }
