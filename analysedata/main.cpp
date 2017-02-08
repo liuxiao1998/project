@@ -43,7 +43,7 @@ public:
     {
       for(i=0;i<=numlimit;++i)
       {
-        if(getline(file,namelist[i])==NULL)
+        if(!getline(file,namelist[i]))
         {
           j=i;
           break;

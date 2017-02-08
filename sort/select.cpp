@@ -9,7 +9,7 @@ bool cmp(int a, int b)
 }
 int main()
 {
-  int i,med,id,k;
+  int i,med,k;
   vector<int>ab;
 
 

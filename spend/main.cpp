@@ -59,7 +59,7 @@ class pa{
         void rmall()
         {
             ofstream fp("log.txt");
-            fp<<NULL;
+            fp<<"";
             getsave();
         }
         }all;
